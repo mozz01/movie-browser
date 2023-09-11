@@ -5,10 +5,27 @@
         <title>Movie Browser</title>
         <link rel="stylesheet" href="src/style.css">
     </head>
-    
-    <body>
-        <div>
 
+    <body>
+        <div class="top-nav">
+            <a class="active" href="#">Movies Browser</a>
+            <div class="search-container">
+                <form role="search" id="form">
+                    <input type="search" id="query" name="q" placeholder="Search">
+                </form>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 10px">
+            <div class="column">
+                <div class="card">
+                    <div class="image-container">
+                        <center><img src="images/The-Dark-Knight-Thumbnail.png" class="thumbnail" draggable="false"></center>
+                        <!-- <img src="images/The-Dark-Knight-Thumbnail.png" class="thumbnail" draggable="false"> -->
+                    </div>
+                    <h3>The Dark Knight</h3>
+                </div>
+            </div>
         </div>
         
         
