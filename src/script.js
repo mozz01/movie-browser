@@ -1,4 +1,4 @@
-const API_LINK = 'https://api.themoviedb.org/3/search/movie?query=smile&include_adult=false&language=en-US&page=1'
+const API_LINK = 'https://api.themoviedb.org/3/search/movie?query=batman&include_adult=false&language=en-US&page=1'
 const IMAGE_PATH = 'https://image.tmdb.org/t/p/w1280'
 const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?query='
 
@@ -35,9 +35,6 @@ function getMovies(url)
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class', 'card');
 
-            const imageContainerDiv = document.createElement('div');
-            imageContainerDiv.setAttribute('class', 'image-container');
-
             const image = document.createElement('img');
             image.setAttribute('class', 'thumbnail');
             image.setAttribute('draggable', 'false');
@@ -56,8 +53,7 @@ function getMovies(url)
                 image.setAttribute('src', 'images/not_found.png');
             }
 
-            imageContainerDiv.appendChild(image);
-            cardDiv.append(imageContainerDiv, titleDiv);
+            cardDiv.append(image, titleDiv);
             columnDiv.appendChild(cardDiv);
             rowDiv.appendChild(columnDiv);
             
